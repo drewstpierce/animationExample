@@ -14,6 +14,11 @@ Game.MainMenu.prototype = {
 
         this.enterKey.onDown.add(this.playGame, this);
     },
+    update: function () {
+        if (this.game.input.activePointer.isDown) {
+            this.playGame();
+        }
+    },
     playGame: function () {
         this.state.start('Level1');
     }
