@@ -5,8 +5,10 @@ Game.Preloader = function(game) {
 Game.Preloader.prototype = {
     preload: function() {
 //load assets
-    this.load.image('map', 'assets/map.png');
-    this.load.image('map2', 'assets/map3.png');    
+    this.load.image('background0', 'assets/parallax0.png');
+      this.load.image('background1', 'assets/parallax1.png');
+        this.load.image('background2', 'assets/parallax2.png');
+          this.load.image('background3', 'assets/parallax3.png'); 
     this.load.atlas('player', 'assets/player/spritesheet.png', 'assets/player/sprites.json');
         },    
     create: function() {

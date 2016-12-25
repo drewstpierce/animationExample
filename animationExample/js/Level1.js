@@ -31,8 +31,10 @@ Game.Level1.prototype = {
     this.world.setBounds(0, 0, 384, 216);
     
     this.world.setBounds(0, 0, 384, 216);
-background1 = this.game.add.tileSprite(0, 0, 384, this.game.height, 'map2');
-background2 = this.game.add.tileSprite(0, 0, 384, this.game.height, 'map');
+    background0 = this.game.add.tileSprite(0, 0, 384, this.game.height, 'background0');
+    background2 = this.game.add.tileSprite(0, 0, 384, this.game.height, 'background2');
+background1 = this.game.add.tileSprite(0, 0, 384, this.game.height, 'background1');
+background3 = this.game.add.tileSprite(0, 0, 384, this.game.height, 'background3');
     
    
     this.setUpKeys();
@@ -58,13 +60,16 @@ background2 = this.game.add.tileSprite(0, 0, 384, this.game.height, 'map');
 
         if ((player.x >= 324) && (player.facing === 'right') &&  (this.game.input.activePointer.isDown)) {
                background1.tilePosition.x -= 1;
-               background2.tilePosition.x -= 2;
+               background2.tilePosition.x -= 1.5;
+                background3.tilePosition.x -= 2;
         } else if ((player.x <= 64) && (player.facing === 'left') && (this.game.input.activePointer.isDown)) {
                 background1.tilePosition.x += 1;
-                background2.tilePosition.x += 2;
+                background2.tilePosition.x += 1.5;
+                background3.tilePosition.x += 2;
         } else {
             background1.tilePosition.x += 0;
             background2.tilePosition.x += 0;
+            background3.tilePosition.x += 0;
         }
     }
 };
